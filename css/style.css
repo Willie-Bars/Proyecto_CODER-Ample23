@@ -10,6 +10,13 @@ header nav img {
     width: 70%;
 }
 
+.navbar .dropdown-item:focus,
+.navbar .dropdown-item:active {
+    background-color: #343a40;
+    color: #fff; 
+    outline: none; 
+}
+
 /* estilos de body */
 
 body{
