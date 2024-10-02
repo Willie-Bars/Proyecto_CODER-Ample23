@@ -1,0 +1,187 @@
+//import variables
+@import "../utilities/variables";
+//import mixin
+@import "../utilities/mixin";
+
+/* estilos */
+
+header {
+  nav {
+    background-color: $color-sec;
+    img {
+      width: 70%;
+    }
+  }
+}
+.nav-link {
+  border-color: $color-prim !important;
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: $color-prim;
+}
+
+.navbar .nav-link.active {
+  font-weight: bold;
+}
+.navbar .dropdown-item:focus,
+.navbar .dropdown-item:active {
+  background-color: $color-nav-drop;
+  color: $color-nav-text;
+  outline: none;
+}
+
+section h2 {
+    margin-bottom: 20px;
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px; /* Espacio entre el label y el campo */
+    font-weight: bold;   /* Opcional: hacer los labels más visibles */
+}
+
+form input, form textarea, form select {
+    margin-bottom: 20px; /* Espacio debajo de cada campo de entrada */
+    padding: 10px;       /* Relleno interno de los campos para hacerlos más amplios */
+    border-radius: 5px;  /* Bordes redondeados en los campos */
+    border: 1px solid $color-sec; /* Color de borde de los campos */
+}
+
+fieldset {
+    margin-bottom: 30px; /* Espacio entre fieldsets */
+    padding: 20px;       /* Relleno interno del fieldset */
+    border: 2px solid $color-sec; /* Color y grosor del borde */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+legend {
+    font-weight: bold;   /* Destacar el título del fieldset */
+    font-size: 1.2em;    /* Aumentar el tamaño del texto de la leyenda */
+}
+
+/* Espacio entre elementos del fieldset de comentarios y check */
+.mb-3, .form-check  {
+    margin-bottom: 20px;
+}
+/* Estilo del botón */
+
+.btn {
+    padding: 10px 20px;  /* Espacio dentro del botón */
+    font-size: 16px;     /* Aumentar el tamaño de fuente del botón */
+}
+
+/* estilos mobile */
+
+main, main p, main .informacion, .bienvenida, .bienvenida p{
+    @include text;
+}
+
+main h1 {
+    font-weight: 600;
+    padding-bottom: 10px;
+    @include text;
+}
+
+main h1 span {
+    @include block;
+}
+
+main h3 {
+    font-style: italic;
+    font-weight: 500;
+}
+
+
+iframe {
+   @include block;
+    max-width: 100%;
+    padding: 30px;
+}
+
+#iframe {
+    @include flex;
+    margin: 20px;
+}
+
+#staff img {
+    @include block;
+    padding: 10px;
+}
+
+main .fotos {
+    @include grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 10px;
+}
+main div img {
+    width: 70%;
+    border-radius: 15px;
+}
+
+.wsp {
+    position: fixed;
+    right: 5px;
+    bottom: 30px;
+    width: 15%;
+}
+
+/* estilos de footer */
+
+footer {
+    background-color: $color-sec;
+    color: $color-prim;
+    @include text;
+}
+
+footer ul {
+    @include flex;
+    list-style: none;
+    flex-direction: row;
+    padding: 15px;
+}
+
+footer ul li a img {
+    width: 20%;
+}
+
+/* estilos desktop */
+
+@media screen and (min-width:1024px) {
+
+    main {
+        grid-template-columns: 1.5fr repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        padding: 2rem 6rem;
+        column-gap: 1rem;
+    }
+
+    main h1 span {
+        display: inline;
+    }
+    
+    main .fotos {
+        @include flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .consola {
+        width: 60%;
+        margin: auto;
+     
+    }
+    
+  
+    .wsp {
+        position: fixed;
+        right: 10px;
+        bottom: 30px;
+        width: 8%;
+    }
+}

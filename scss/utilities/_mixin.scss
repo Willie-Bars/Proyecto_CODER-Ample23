@@ -1,0 +1,29 @@
+//mixin flex
+
+@mixin flex{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* mixin grid */
+
+@mixin grid{
+    display: grid;
+    text-align: center;
+}
+
+/* mixin bloque */
+
+@mixin block{
+    display: block;
+    margin: 0 auto;
+}
+
+//mixin format text
+
+@mixin text{
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+}
